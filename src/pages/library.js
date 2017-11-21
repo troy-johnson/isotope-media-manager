@@ -5,7 +5,7 @@ class Library extends Component {
   render() {
     return (
         <div>
-            <p>Home</p>
+            <p>Library</p>
         </div>
     );
   }

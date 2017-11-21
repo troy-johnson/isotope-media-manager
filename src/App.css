@@ -1,0 +1,17 @@
+body {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0%;
+    background-color: #002642;
+    box-shadow: inset 0px 0px 1000px 50px #000;
+    color: white;
+}
+
+h3 {
+    align-content: center;
+    align-items: center;
+    align-self: center;
+    justify-content: center;
+    justify-self: center;
+}

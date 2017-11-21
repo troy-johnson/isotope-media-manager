@@ -1,7 +1,5 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
 import './App.css';
-import './cover.css';
 
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
 
@@ -14,45 +12,41 @@ import detail from './pages/detail'
 class App extends Component {
   render() {
     return (
-      <div className="">
-        <div className="site-wrapper">
-          <div className="site-wrapper-inner">
-            <div className="cover-container">
-              <header className="masthead clearfix">
-                <div className="inner">
-                  <h3 className="masthead-brand">Cover</h3>
-                  <nav className="nav nav-masthead">
-                    <a className="nav-link active" href={home}>Home</a>
-                    <a className="nav-link" href={library}>Library</a>
-                    <a className="nav-link" href={admin}>Admin</a>
+      <div className='App-wrapper'>
+              <header>
+                <div>
+                  <h3>Black Ice Media Manager</h3>
+                  <nav className='navbar navbar-expand-lg mb-1 top-bar navbar-static-top'>
+                    <div className='container'>
+                      <button className='navbar-toggler navbar-toggler-right' type='button' data-toggle='collapse' data-target='#navbarCollapse1' aria-controls='navbarCollapse' aria-expanded='false' aria-label='Toggle navigation'>
+                        <span className='navbar-toggler-icon'></span>
+                      </button>
+                      <div className='collapse navbar-collapse' id='navbarCollapse1'>
+                      <hr />
+                        <ul className='navbar-nav ml-auto'>
+                          <li className='nav-item active'><a className='nav-link' href='/'>Home <span className='sr-only'>(current)</span></a></li>
+                          <li className='nav-item'><a className='nav-link' href='/library'>Library</a></li>
+                          <li className='nav-item'><a className='nav-link' href='/admin'>Admin</a></li>
+                        </ul>
+                      </div>
+                    </div>
                   </nav>
                 </div>
               </header>
-            <main role="main" className="inner cover">
-            <h1 className="cover-heading">Cover your page.</h1>
-            <p className="lead">Cover is a one-page template <a href={home}>for</a> building simple and beautiful home pages. Download, edit the text, and add your own fullscreen background photo to make it your own.</p>
-            <p className="lead">
-              <a href="#" className="btn btn-lg btn-secondary">Learn more</a>
-            </p>
-            <div className="Routes">
-          <Router>
-            <Switch>
-              <Route exact path='/' component={home} />
-              <Route path='/library' component={library} />
-              <Route exact path='/detail' component={detail} />
-              <Route path='/admin' component={admin} />
-              <Route component={notfound} />
-            </Switch>
-          </Router>
-        </div>
-          </main>
-
-        </div>
-
-      </div>
-
-    </div>
-      </div>
+            <main role='main'>
+            </main>
+            <div className='Routes'>
+              <Router>
+                <Switch>
+                  <Route exact path='/' component={home} />
+                  <Route path='/library' component={library} />
+                  <Route exact path='/detail' component={detail} />
+                  <Route path='/admin' component={admin} />
+                  <Route component={notfound} />
+                </Switch>
+              </Router>
+            </div>
+          </div>
     );
   }
 }
