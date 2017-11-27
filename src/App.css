@@ -5,23 +5,27 @@ body {
     top: 0%;
     background-color: #002642;
     box-shadow: inset 0px 0px 1000px 50px #000;
-    color: white;
-}
-
-h3 {
-    align-content: center;
-    align-items: center;
-    align-self: center;
-    justify-content: center;
-    justify-self: center;
+    color: #e8f5ff;
 }
 
 .card {
+    background-color: #e8f5ff;
     width: 20rem;
-    padding: 10px 10px 10px 10px;
+    padding: 5px 5px 5px 5px;
     margin: 10px 10px 10px 10px;
   }
   
 .card p {
     color: black;
 }
+
+/* .crop {
+    height: auto;
+    width: 175px;
+    overflow: hidden;
+}
+
+.crop img {
+    height: 150px;
+    width: auto;
+} */

@@ -16,8 +16,8 @@ class Library extends Component {
         </div>
         <div className='row justify-content-center'>
           {!loading && allMedias.map(media => (
-            <div key={media.id} className='card'>
-              <div>
+            <div key={media.id} className='card z-depth-1'>
+              <div className='crop'>
                 <a href={'/library/' + media.id}><img className='card-img-top' src={media.image} alt={media.name} /></a>
                 <p className='card-title'>{media.name}</p>
               </div>
