@@ -15,3 +15,13 @@ h3 {
     justify-content: center;
     justify-self: center;
 }
+
+.card {
+    width: 20rem;
+    padding: 10px 10px 10px 10px;
+    margin: 10px 10px 10px 10px;
+  }
+  
+.card p {
+    color: black;
+}

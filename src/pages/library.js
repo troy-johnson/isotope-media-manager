@@ -1,14 +1,42 @@
-import React, { Component } from 'react';
+import React, { Component } from 'react'
 import '../App.css';
+import { graphql } from 'react-apollo'
+import gql from 'graphql-tag'
+
 
 class Library extends Component {
   render() {
+
+    const { loading, allMedias } = this.props.data
+
     return (
+      <div className='container-fluid'>
         <div>
-            <p>Library</p>
+            <h1 className='display-3'>Library</h1>
         </div>
-    );
+        <div className='row justify-content-center'>
+          {!loading && allMedias.map(media => (
+            <div key={media.id} className='card'>
+              <div>
+                <a href={'/library/' + media.id}><img className='card-img-top' src={media.image} alt={media.name} /></a>
+                <p className='card-title'>{media.name}</p>
+              </div>
+            </div>   
+        ))}
+      </div>
+    </div>  
+    )
   }
 }
 
-export default Library;
+const QUERY = gql`
+query {
+  allMedias {
+    id
+    image
+    name
+  }
+}
+`
+
+export default graphql(QUERY)(Library)
