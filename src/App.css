@@ -1,31 +1,18 @@
+/* 
+ Dark Grey: #1b1b1b
+ Med Grey: #424242
+ Light Grey: #6d6d6d
+
+ Dark Green: #32cb00
+ Med Green: #76ff03
+ Light Green: #b0ff57
+
+*/
+
 body {
+    font-family: 'Roboto', sans-serif;
     width: 100%;
     height: 100%;
-    position: absolute;
-    top: 0%;
-    background-color: #002642;
-    box-shadow: inset 0px 0px 1000px 50px #000;
-    color: #e8f5ff;
+    background-color: #1b1b1b;
+    color: white;
 }
-
-.card {
-    background-color: #e8f5ff;
-    width: 20rem;
-    padding: 5px 5px 5px 5px;
-    margin: 10px 10px 10px 10px;
-  }
-  
-.card p {
-    color: black;
-}
-
-/* .crop {
-    height: auto;
-    width: 175px;
-    overflow: hidden;
-}
-
-.crop img {
-    height: 150px;
-    width: auto;
-} */

@@ -1,12 +1,11 @@
 import React, { Component } from 'react';
 import '../App.css';
+import Crud from './crud.js'
 
 class Admin extends Component {
   render() {
     return (
-      <div>
-        <p>Admin</p>
-      </div>
+      <Crud />
     );
   }
 }

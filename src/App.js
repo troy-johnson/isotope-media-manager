@@ -1,5 +1,5 @@
-import React, { Component } from 'react';
-import './App.css';
+import React, { Component } from 'react'
+import './App.css'
 
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
 
@@ -13,28 +13,21 @@ class App extends Component {
   render() {
     return (
       <div className='App-wrapper'>
-              <header>
-                <div>
-                  <h3>Black Ice Media Manager</h3>
-                  <nav className='navbar navbar-expand-lg mb-1 top-bar navbar-static-top'>
-                    <div className='container'>
-                      <button className='navbar-toggler navbar-toggler-right' type='button' data-toggle='collapse' data-target='#navbarCollapse1' aria-controls='navbarCollapse' aria-expanded='false' aria-label='Toggle navigation'>
-                        <span className='navbar-toggler-icon'></span>
-                      </button>
-                      <div className='collapse navbar-collapse' id='navbarCollapse1'>
-                      <hr />
-                        <ul className='navbar-nav ml-auto'>
-                          <li className='nav-item active'><a className='nav-link' href='/'>Home <span className='sr-only'>(current)</span></a></li>
-                          <li className='nav-item'><a className='nav-link' href='/library'>Library</a></li>
-                          <li className='nav-item'><a className='nav-link' href='/admin'>Admin</a></li>
-                        </ul>
-                      </div>
-                    </div>
-                  </nav>
-                </div>
-              </header>
-            <main role='main'>
-            </main>
+        <header>
+          <nav className="mdc-permanent-drawer mdc-typography">
+            <div className="mdc-permanent-drawer__toolbar-spacer"></div>
+            <div className="mdc-permanent-drawer__content">
+              <nav id="icon-with-text-demo" className="mdc-list">
+                <a className="mdc-list-item mdc-permanent-drawer--selected" href="#">
+                  <i className="material-icons mdc-list-item__start-detail" aria-hidden="true">inbox</i>Inbox
+                </a>
+                <a className="mdc-list-item" href="#">
+                  <i className="material-icons mdc-list-item__start-detail" aria-hidden="true">star</i>Star
+                </a>
+              </nav>
+            </div>
+          </nav>
+        </header>
             <div className='Routes'>
               <Router>
                 <Switch>

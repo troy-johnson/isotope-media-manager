@@ -12,7 +12,7 @@ class Library extends Component {
     return (
       <div className='container-fluid'>
         <div>
-            <h1 className='display-3'>Library</h1>
+            <h2 className='display-3'>Library</h2>
         </div>
         <div className='row justify-content-center'>
           {!loading && allMedias.map(media => (
