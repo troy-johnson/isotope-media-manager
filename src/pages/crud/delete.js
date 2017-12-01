@@ -10,9 +10,22 @@ import '../../App.css';
 
 class Delete extends Component {
 
+  constructor() {
+    super();
+    this.state = {
+      id: '',
+    }
+  }
+
+  onChange = (e) => {
+    const state = this.state
+    state[e.target.name] = e.target.value
+    this.setState(state)
+  }
+
   onClick() {
     this.props.mutate({
-      variables: { id: '' }
+      variables: { id: this.state.id }
     })
       .then(({ data }) => {
         console.log('got data', data);
@@ -22,13 +35,14 @@ class Delete extends Component {
   }
   
   render() {
-
+    const { id }  = this.state
     return (
-
       <div>
         <h2>Delete</h2>
-        <input type='text' id='delete' placeholder='Enter ID'/>
-        <label for='delete'><button onClick={this.onClick.bind(this)} type='submit'>Delete!</button></label>
+        <form>
+          <input type='text' name='id' value={id} onChange={this.onChange} placeholder='Enter ID'/>
+          <button onClick={this.onClick.bind(this)} type='submit'>Delete!</button>
+        </form>
       </div>
     )
   }
