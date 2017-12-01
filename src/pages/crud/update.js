@@ -7,7 +7,6 @@ class Update extends Component {
       <div>
         <h2>Update</h2>
         <input type="text" id="update-id" placeholder='Enter ID'/>
-        <label for="update-id"><button>Update!</button></label>
       </div>
     );
   }

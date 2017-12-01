@@ -23,25 +23,38 @@ class Delete extends Component {
     this.setState(state)
   }
 
-  onClick() {
+  onSubmit = (e) => {
+    const { id } = this.state
     this.props.mutate({
-      variables: { id: this.state.id }
+      variables: { id: id }
     })
       .then(({ data }) => {
-        console.log('got data', data);
+        console.log('got data', data)
       }).catch((error) => {
-        console.log('there was an error sending the query', error);
-      });
+        console.log('there was an error sending the query', error)
+      })
   }
+
+  // onClick() {
+  //   this.props.mutate({
+  //     variables: { id: this.state.id }
+  //   })
+  //     .then(({ data }) => {
+  //       console.log('got data', data);
+  //     }).catch((error) => {
+  //       console.log('there was an error sending the query', error);
+  //     });
+  // }
   
   render() {
     const { id }  = this.state
     return (
       <div>
         <h2>Delete</h2>
-        <form>
+        <form onSubmit={this.onSubmit}>
           <input type='text' name='id' value={id} onChange={this.onChange} placeholder='Enter ID'/>
-          <button onClick={this.onClick.bind(this)} type='submit'>Delete!</button>
+          {/* <button onClick={this.onClick.bind(this)} type='submit'>Delete!</button> */}
+          <button type='submit'>Submit</button>
         </form>
       </div>
     )
