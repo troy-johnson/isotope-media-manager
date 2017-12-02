@@ -31,7 +31,7 @@ class Delete extends Component {
     return (
       <div>
         <h2>Update</h2>
-        <form onSubmit={this.onSubmit}>
+        <form onSubmit={this.onSubmit} action='#'>
           <div className='mdl-textfield mdl-js-textfield'>
             <input type='text' name='id' className='mdl-textfield__input' id='id-field' value={id} onChange={e => this.setState({ id: e.target.value })} />
             <label className='mdl-textfield__label' htmlFor='id-field'>Enter ID</label>

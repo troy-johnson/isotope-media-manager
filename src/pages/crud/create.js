@@ -54,16 +54,8 @@ class Create extends Component {
 }
 
 const MUTATION = gql`
-  mutation createMedia($format: String!,
-                       $image: String!,
-                       $movieDb: String!,
-                       $name: String!,
-                       $yearReleased: Int!) {
-    createMedia(format: $format,
-                image: $image,
-                movieDb: $movieDb,
-                name: $name,
-                yearReleased: $yearReleased) {
+  mutation createMedia($format: String!, $image: String!, $movieDb: String!, $name: String!, $yearReleased: Int!) {
+    createMedia(format: $format, image: $image, movieDb: $movieDb, name: $name, yearReleased: $yearReleased) {
       id
       name
     }
