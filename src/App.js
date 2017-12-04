@@ -33,11 +33,11 @@ class App extends Component {
                   <a className='nav-link' href='/admin'>Admin</a>
                 </li>
                 <li className='nav-item dropdown'>
-                  <a className='nav-link dropdown-toggle' id='navbarDropdown' role='button' data-toggle='dropdown' 
+                  <a className='nav-link dropdown-toggle' href= '' id='navbarDropdown' role='button' data-toggle='dropdown' 
                   aria-haspopup='true' aria-expanded='false'>Other</a>
                   <div className='dropdown-menu' aria-labelledby='navbarDropdown'>
-                    <a className='dropdown-item' href='https://www.themoviedb.org/?language=en'>The MovieDB</a>
-                    <a className='dropdown-item' href='http://www.imdb.com/'>IMDB</a>
+                    <a className='dropdown-item' target='_blank' rel='noopener noreferrer' href='https://www.themoviedb.org/?language=en'>The MovieDB</a>
+                    <a className='dropdown-item' target='_blank' rel='noopener noreferrer' href='http://www.imdb.com/'>IMDB</a>
                   </div>
                 </li>
               </ul>

@@ -39,7 +39,6 @@ class Create extends Component {
     const { format, image, movieDb, name, yearReleased }  = this.state
     return (
       <div>
-        <h2>Create</h2>
         <form onSubmit={this.onSubmit}>
           <input type='text' name='format' value={format} onChange={e => this.setState({ format: e.target.value })} placeholder='Format' />
           <input type='text' name='image' value={image} onChange={e => this.setState({ image: e.target.value })} placeholder='Image URL' />

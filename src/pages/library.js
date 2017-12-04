@@ -19,7 +19,8 @@ class Library extends Component {
             <div key={media.id} className='card z-depth-1'>
               <div className='crop'>
                 <a href={'/library/' + media.id}><img className='card-img-top' src={media.image} alt={media.name} /></a>
-                <p className='card-title'>{media.name}</p>
+                <p className='card-title'>{media.name} ({media.yearReleased})</p>
+                <p className='card-text'>{media.format}</p>
               </div>
             </div>   
         ))}
@@ -35,6 +36,9 @@ query {
     id
     image
     name
+    yearReleased
+    movieDb
+    format
   }
 }
 `

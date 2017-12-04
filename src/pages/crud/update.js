@@ -41,7 +41,6 @@ class Update extends Component {
     const { id, format, image, movieDb, name, yearReleased }  = this.state
     return (
       <div>
-        <h2>Update</h2>
         <form onSubmit={this.onSubmit}>
           <input type='text' name='id' value={id} onChange={e => this.setState({ id: e.target.value })} placeholder='ID' /> 
           <input type='text' name='format' value={format} onChange={e => this.setState({ format: e.target.value })} placeholder='Format' />

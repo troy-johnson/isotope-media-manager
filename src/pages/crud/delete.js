@@ -30,10 +30,12 @@ class Delete extends Component {
     const { id }  = this.state
     return (
       <div>
-        <h2>Delete</h2>
-        <form onSubmit={this.onSubmit}>
-          <input type='text' name='id' value={id} onChange={e => this.setState({ id: e.target.value })} placeholder='Enter ID'/>
-          <button type='submit'>Submit</button>
+        <form onSubmit={this.onSubmit} action='#'>
+          <div className='mdl-textfield mdl-js-textfield mdl-textfield--floating-label'>
+            <input className='mdl-textfield__input' id='id-delete' type='text' name='id' value={id} onChange={e => this.setState({ id: e.target.value })} />
+            <label className='mdl-textfield__label' htmlFor='id-delete'>ID</label>
+            <button type='submit'>Submit</button>
+          </div>  
         </form>
       </div>
     )
