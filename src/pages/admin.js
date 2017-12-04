@@ -10,16 +10,15 @@ class Admin extends Component {
       <div>
         <h2 className='display-3'>Admin</h2>
         <main>
-
           <ul className="nav nav-tabs" id="myTab" role="tablist">
             <li className="nav-item">
-              <a className="nav-link" id="create-tab" data-toggle="tab" href="#create" role="tab" aria-controls="home" aria-selected="true">Create</a>
+              <a className="nav-link" id="create-tab" data-toggle="tab" href="#create" role="tab" aria-controls="home" aria-selected="true"><b>Create</b></a>
             </li>
             <li className="nav-item">
-              <a className="nav-link" id="update-tab" data-toggle="tab" href="#update" role="tab" aria-controls="profile" aria-selected="false">Update</a>
+              <a className="nav-link" id="update-tab" data-toggle="tab" href="#update" role="tab" aria-controls="profile" aria-selected="false"><b>Update</b></a>
             </li>
             <li className="nav-item">
-              <a className="nav-link" id="delete-tab" data-toggle="tab" href="#delete" role="tab" aria-controls="contact" aria-selected="false">Delete</a>
+              <a className="nav-link" id="delete-tab" data-toggle="tab" href="#delete" role="tab" aria-controls="contact" aria-selected="false"><b>Delete</b></a>
             </li>
           </ul>
           <div className="tab-content" id="myTabContent">
