@@ -8,9 +8,10 @@ import gql from 'graphql-tag'
 // CSS
 import '../../App.css';
 
-class Create extends Component {
+class Update extends Component {
 
   state = {
+      id: '',
       format: '',
       image: '',
       movieDb: '',
@@ -21,7 +22,8 @@ class Create extends Component {
   onSubmit = (e) => {
     e.preventDefault()
     this.props.mutate({
-      variables: { format: this.state.format, 
+      variables: { id: this.state.id,
+                   format: this.state.format, 
                    image: this.state.image,
                    movieDb: this.state.movieDb,
                    name: this.state.name,
@@ -36,11 +38,12 @@ class Create extends Component {
   }
 
   render() {
-    const { format, image, movieDb, name, yearReleased }  = this.state
+    const { id, format, image, movieDb, name, yearReleased }  = this.state
     return (
       <div>
         <h2>Create</h2>
         <form onSubmit={this.onSubmit}>
+          <input type='text' name='id' value={id} onChange={e => this.setState({ id: e.target.value })} placeholder='ID' /> 
           <input type='text' name='format' value={format} onChange={e => this.setState({ format: e.target.value })} placeholder='Format' />
           <input type='text' name='image' value={image} onChange={e => this.setState({ image: e.target.value })} placeholder='Image URL' />
           <input type='text' name='movieDb' value={movieDb} onChange={e => this.setState({ movieDb: e.target.value })} placeholder='The movieDb URL' />
@@ -54,12 +57,12 @@ class Create extends Component {
 }
 
 const MUTATION = gql`
-  mutation createMedia($format: String!, $image: String!, $movieDb: String!, $name: String!, $yearReleased: Int!) {
-    createMedia(format: $format, image: $image, movieDb: $movieDb, name: $name, yearReleased: $yearReleased) {
+  mutation updateMedia($id: ID!, $format: String!, $image: String!, $movieDb: String!, $name: String!, $yearReleased: Int!) {
+    updateMedia(id: $id, format: $format, image: $image, movieDb: $movieDb, name: $name, yearReleased: $yearReleased) {
       id
       name
     }
   }  
 `
 
-export default graphql(MUTATION)(Create)
+export default graphql(MUTATION)(Update)
