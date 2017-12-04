@@ -5,7 +5,7 @@ class Home extends Component {
   render() {
     return (
       <div>
-        <p>Isotope</p>
+        <p>Site description, login, etc.</p>
       </div>
     );
   }

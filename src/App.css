@@ -13,11 +13,24 @@ body {
     font-family: 'Roboto', sans-serif;
     width: 100%;
     height: 100%;
-    /* background-color: #1b1b1b;
-    color: white; */
+    background-color: #6d6d6d;
+    color:#1b1b1b
+}
+
+.navbar nav {
+    background-color: #1b1b1b;
+    color: #76ff03;
+}
+
+.nav-link {
+    color: #76ff03;
+}
+
+.nav-link:hover {
+    color: #32cb00;
 }
 
 .card {
-    margin: 2rem;
+    margin: 1.5rem;
     width: 20rem;
 }
