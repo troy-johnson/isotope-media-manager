@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom'
 import Library from './pages/Library'
 import renderer from 'react-test-renderer'
 
-it('renders without crashing', () => {
+it('library renders without crashing', () => {
   const div = document.createElement('div');
   ReactDOM.render(<Library />, div);
 });

@@ -9,6 +9,7 @@
     "apollo-client-preset": "^1.0.3",
     "graphql": "^0.11.7",
     "graphql-tag": "^2.5.0",
+    "jest-cli": "^21.2.1",
     "material-components-web": "^0.26.0",
     "muicss": "^0.9.30",
     "react": "^16.1.1",

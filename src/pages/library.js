@@ -4,7 +4,7 @@ import { graphql } from 'react-apollo'
 import gql from 'graphql-tag'
 
 
-class Library extends Component {
+export class Library extends Component {
   render() {
 
     const { loading, allMedias } = this.props.data
