@@ -1,8 +1,8 @@
 import React, { Component } from 'react'
 import '../App.css';
 import { graphql } from 'react-apollo'
-import gql from 'graphql-tag'
-
+// import gql from 'graphql-tag'
+import libraryQuery from '../config/libraryquery'
 
 export class Library extends Component {
   render() {
@@ -32,17 +32,18 @@ export class Library extends Component {
   }
 }
 
-const QUERY = gql`
-query {
-  allMedias {
-    id
-    image
-    name
-    yearReleased
-    movieDb
-    format
-  }
-}
-`
+// const QUERY = gql`
+// query {
+//   allMedias {
+//     id
+//     image
+//     name
+//     yearReleased
+//     movieDb
+//     format
+//   }
+// }
+// `
 
-export default graphql(QUERY)(Library)
+const LibraryWrapper = graphql(libraryQuery)(Library)
+export default LibraryWrapper

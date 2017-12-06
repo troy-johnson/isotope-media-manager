@@ -1,14 +1,12 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
-import Library from './pages/Library'
-import renderer from 'react-test-renderer'
+import renderer from 'react-test-renderer';
+import { MockedProvider } from 'react-apollo/test-utils'
+import Library from './pages/library'
 
 it('library renders without crashing', () => {
-  const div = document.createElement('div');
-  ReactDOM.render(<Library />, div);
-});
-
-it('renders a snapshot', () => {
-  const tree = renderer.create(<Library/>).toJSON();
-  expect(tree).toMatchSnapshot();
-});
+  const tree = renderer(create(
+    <MockedProvider mocks ={[]}>
+      <Library />
+    </MockedProvider>).toJSON())
+   expect(tree).toMatchSnapshot()})
