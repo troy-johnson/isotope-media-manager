@@ -75,3 +75,7 @@ header {
 .modal {
     color: #1b1b1b;
 }
+
+.col > .form-control {
+    margin-bottom: 10px;
+}

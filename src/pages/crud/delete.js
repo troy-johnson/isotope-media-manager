@@ -31,8 +31,8 @@ class Delete extends Component {
     return (
       <div>
         <form onSubmit={this.onSubmit} action='#'>
-            <input className='' id='id-delete' type='text' name='id' value={id} onChange={e => this.setState({ id: e.target.value })} placeholder='ID'/>
-            <button type='submit'>Submit</button>
+            <input className='form-control' id='id-delete' type='text' name='id' value={id} onChange={e => this.setState({ id: e.target.value })} placeholder='ID'/>
+            <button className='btn btn-info' type='submit'>Submit</button>
         </form>
       </div>
     )

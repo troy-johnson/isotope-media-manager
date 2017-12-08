@@ -42,13 +42,19 @@ class Update extends Component {
     return (
       <div>
         <form onSubmit={this.onSubmit}>
-          <input type='text' name='id' value={id} onChange={e => this.setState({ id: e.target.value })} placeholder='ID' /> 
-          <input type='text' name='format' value={format} onChange={e => this.setState({ format: e.target.value })} placeholder='Format' />
-          <input type='text' name='image' value={image} onChange={e => this.setState({ image: e.target.value })} placeholder='Image URL' />
-          <input type='text' name='movieDb' value={movieDb} onChange={e => this.setState({ movieDb: e.target.value })} placeholder='The movieDb URL' />
-          <input type='text' name='name' value={name} onChange={e => this.setState({ name: e.target.value })} placeholder='Title' />
-          <input type='number' name='yearReleased' step='1' min='1800' max={new Date().getFullYear() + 2} value={yearReleased} onChange={e => this.setState({ yearReleased: e.target.value })} placeholder='Year Released'/>
-          <button type='submit'>Submit</button>
+          <div className='row'>
+            <div className='col'>
+              <input className='form-control' type='text' name='id' value={id} onChange={e => this.setState({ id: e.target.value })} placeholder='ID' /> 
+              <input className='form-control' type='text' name='format' value={format} onChange={e => this.setState({ format: e.target.value })} placeholder='Format' />
+              <input className='form-control' type='text' name='image' value={image} onChange={e => this.setState({ image: e.target.value })} placeholder='Image URL' />
+            </div>
+            <div className='col'>
+              <input className='form-control' type='text' name='movieDb' value={movieDb} onChange={e => this.setState({ movieDb: e.target.value })} placeholder='The movieDb URL' />
+              <input className='form-control' type='text' name='name' value={name} onChange={e => this.setState({ name: e.target.value })} placeholder='Title' />
+              <input className='form-control' type='number' name='yearReleased' step='1' min='1800' max={new Date().getFullYear() + 2} value={yearReleased} onChange={e => this.setState({ yearReleased: e.target.value })} placeholder='Year Released'/>
+            </div>
+          </div>
+          <button className='btn btn-info' type='submit'>Submit</button>
         </form>
       </div>
     )

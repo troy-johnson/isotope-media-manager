@@ -49,9 +49,9 @@ class Create extends Component {
             <div className='col'>
               <input className='form-control' type='text' name='movieDb' value={movieDb} onChange={e => this.setState({ movieDb: e.target.value })} placeholder='The movieDb URL' required />
               <input className='form-control' type='number' name='yearReleased' step='1' min='1895' max={new Date().getFullYear() + 2} value={yearReleased} onChange={e => this.setState({ yearReleased: e.target.value })} placeholder='Year Released' required/>
-              <button className='btn btn-info' type='submit'>Submit</button>
             </div>
           </div>
+          <button className='btn btn-info' type='submit'>Submit</button>
         </form>
       </div>
     )
