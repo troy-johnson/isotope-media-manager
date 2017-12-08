@@ -7,7 +7,7 @@ import Delete from './crud/delete'
 class Admin extends Component {
   render() {
     return (
-      <div className='container'>
+      <div className='container-fluid'>
         <div className='jumbotron'>
           <h1 className='display-3'>Admin</h1>
           <main>
