@@ -33,7 +33,41 @@ header {
     color: #32cb00;
 }
 
+.jumbotron {
+    margin-top: 67px;
+    background-color: #424242;
+    color: #ffffff;
+}
+
 .card {
-    margin: 1.5rem;
-    width: 20rem;
+    width:200px; 
+    height:300px; 
+    border: 1px solid #76ff03;
+    color: #1b1b1b;
+    margin: 10px;
+    position:relative;
+    overflow:hidden;
+}
+
+.card-img {
+    position:absolute; 
+    width:100%;
+    top: 50%;
+    -ms-transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+    opacity:.5
+}
+
+.btn-info {
+    background-color: #76ff03;
+    color: #1b1b1b;
+    border-color: #32cb00; 
+    margin:5px;
+}
+
+.btn-info:hover {
+    background-color: #76ff03;
+    color: #1b1b1b;
+    border-color: #32cb00;    
 }

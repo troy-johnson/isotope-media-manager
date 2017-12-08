@@ -4,8 +4,10 @@ import '../App.css';
 class Home extends Component {
   render() {
     return (
-      <div>
-        <p>Site description, login, etc.</p>
+      <div className='container'>
+        <div className='jumbotron'>
+          <p>Site description, login, etc.</p>
+        </div>
       </div>
     );
   }

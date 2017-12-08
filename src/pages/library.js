@@ -11,23 +11,23 @@ export class Library extends Component {
 
     return (
       <div className='container-fluid'>
-        <div>
-            <h2 className='display-3'>Library</h2>
+        <div className='jumbotron'>
+          <div>
+              <h2 className='display-3'>Library</h2>
+          </div>
+          <div className='row justify-content-center'>
+            {!loading && allMedias.map(media => (
+                <div key={media.id} className='card bg-dark text-white'>
+                  <img className='card-img' src={media.image} alt={media.name} />
+                  <div className='card-img-overlay'>
+                    <h3 className='card-title'>{media.name} ({media.yearReleased})</h3>
+                    <p className='card-text'>Format: {media.format}</p>
+                  </div>
+                </div>    
+          ))}
         </div>
-        <div className='row justify-content-center'>
-          {!loading && allMedias.map(media => (
-            <div className='jumbotron'>
-              <div key={media.id} className='card z-depth-1'>
-                <div className='crop'>
-                  <a href={'/library/' + media.id}><img className='card-img-top' src={media.image} alt={media.name} /></a>
-                  <p className='card-title'>{media.name} ({media.yearReleased})</p>
-                  <p className='card-text'>{media.format}</p>
-                </div>
-              </div>  
-            </div>   
-        ))}
-      </div>
-    </div>  
+      </div> 
+    </div> 
     )
   }
 }
