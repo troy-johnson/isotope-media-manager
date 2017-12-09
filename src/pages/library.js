@@ -17,17 +17,17 @@ export class Library extends Component {
           </div>
           <div className='row justify-content-center'>
             {!loading && allMedias.map(media => (
-                <div key={media.id} className='card bg-dark text-white'>
-                  <img className='card-img' src={media.image} alt={media.name} />
-                  <div className='card-img-overlay'>
-                    <h3 className='card-title'>{media.name} ({media.yearReleased})</h3>
-                    <p className='card-text'>Format: {media.format}</p>
-                  </div>
-                </div>    
-          ))}
-        </div>
+              <div key={media.id} className='card bg-dark text-white'>
+                <img className='card-img' src={media.image} alt={media.name} />
+                <div className='card-img-overlay'>
+                  <h3 className='card-title'>{media.name} ({media.yearReleased})</h3>
+                  <p className='card-text'>Format: {media.format}</p>
+                </div>
+              </div>    
+            ))}
+          </div>
+        </div> 
       </div> 
-    </div> 
     )
   }
 }

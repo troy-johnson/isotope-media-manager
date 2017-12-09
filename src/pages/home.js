@@ -2,15 +2,40 @@ import React, { Component } from 'react';
 import '../App.css';
 
 class Home extends Component {
+
+  state = {
+    username: '',
+    password: '',
+}
+
+  onSubmit = (e) => {
+    console.log('Username: ' + this.state.username + '\nPassword: ' + this.state.password)
+  }
+
   render() {
+    const { username, password }  = this.state
     return (
       <div className='container-fluid'>
-        <div className='jumbotron'>
-          <div>
-              <h2 className='display-3'>Home</h2>
+        <div className='row'>
+          <div className='col'>
+            <h2>Site description</h2>
+          </div>
+          <div className='col'>
+          <div className='card bg-dark text-white form-group'>
+            <form onSubmit={this.onSubmit}>
+              <div className='row'>
+                <div className='col'>
+                  <input className='form-control' type='text' name='name' value={username} onChange={e => this.setState({ username: e.target.value })} placeholder='Username' required />
+                </div>
+                <div className='col'>
+                <input className='form-control' type='password' name='password' value={password} onChange={e => this.setState({ password: e.target.value })} placeholder='Password' required/>
+              </div>
             </div>
-          <p>Site description, login, etc.</p>
+            <button className='btn btn-info' type='submit'>Login</button>
+          </form>
+          </div>
         </div>
+      </div>
       </div>
     );
   }
