@@ -31,9 +31,27 @@ class Update extends Component {
                 }
     })
       .then(({ data }) => {
-        console.log('got data', data)
+        console.log('success: node updated', data)
+        alert('Great! ' + this.state.name + ' has been updated.')
+        this.setState({
+          id: '',
+          format: '',
+          image: '',
+          movieDb: '',
+          name: '',
+          yearReleased: '',
+        })
     }).catch((error) => {
-        console.log('there was an error sending the query', error)
+        console.log('error: node not created', error)
+        alert('Sorry! There was an error updating ' + this.state.name + '. Please try again or contact us.')
+        this.setState({
+          id: '',
+          format: '',
+          image: '',
+          movieDb: '',
+          name: '',
+          yearReleased: '',
+        })
     })
   }
 

@@ -21,7 +21,7 @@ class Home extends Component {
             <h2>Site description</h2>
           </div>
           <div className='col'>
-          <div className='card bg-dark text-white form-group'>
+          <div className='card mb-3 bg-dark text-white form-group'>
             <form onSubmit={this.onSubmit}>
               <div className='row'>
                 <div className='col'>

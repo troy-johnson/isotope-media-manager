@@ -13,7 +13,7 @@ class Admin extends Component {
           <main>
           
             <button type="button" className="btn btn-info" data-toggle="modal" data-target="#createModal">Create</button>
-            <div className="modal fade" id="createModal" tabindex="-1" role="dialog" aria-labelledby="createModalTitle" aria-hidden="true">
+            <div className="modal fade" id="createModal" tabIndex="-1" role="dialog" aria-labelledby="createModalTitle" aria-hidden="true">
               <div className="modal-dialog" role="document">
                 <div className="modal-content">
                   <div className="modal-header">
@@ -28,7 +28,7 @@ class Admin extends Component {
             </div>
 
             <button type="button" className="btn btn-info" data-toggle="modal" data-target="#updateModal">Update</button>
-            <div className="modal fade" id="updateModal" tabindex="-1" role="dialog" aria-labelledby="updateModalTitle" aria-hidden="true">
+            <div className="modal fade" id="updateModal" tabIndex="-1" role="dialog" aria-labelledby="updateModalTitle" aria-hidden="true">
               <div className="modal-dialog" role="document">
                 <div className="modal-content">
                   <div className="modal-header">
@@ -43,7 +43,7 @@ class Admin extends Component {
             </div>
 
             <button type="button" className="btn btn-info" data-toggle="modal" data-target="#deleteModal">Delete</button>
-            <div className="modal fade" id="deleteModal" tabindex="-1" role="dialog" aria-labelledby="deleteModalTitle" aria-hidden="true">
+            <div className="modal fade" id="deleteModal" tabIndex="-1" role="dialog" aria-labelledby="deleteModalTitle" aria-hidden="true">
               <div className="modal-dialog" role="document">
                 <div className="modal-content">
                   <div className="modal-header">

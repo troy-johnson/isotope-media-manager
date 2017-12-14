@@ -29,9 +29,25 @@ class Create extends Component {
                 }
     })
       .then(({ data }) => {
-        console.log('got data', data)
+        console.log('success: node created', data)
+        alert('Great! ' + this.state.name + ' has been added to your collection.')
+        this.setState({
+          format: '',
+          image: '',
+          movieDb: '',
+          name: '',
+          yearReleased: '',
+        })
     }).catch((error) => {
-        console.log('there was an error sending the query', error)
+        console.log('error: node not created', error)
+        alert('Sorry! There was an error submitting ' + this.state.name + '. Please try again or contact us.')
+        this.setState({
+          format: '',
+          image: '',
+          movieDb: '',
+          name: '',
+          yearReleased: '',
+        })
     })
   }
 

@@ -20,9 +20,17 @@ class Delete extends Component {
       variables: { id: this.state.id }
     })
       .then(({ data }) => {
-        console.log('got data', data)
+        console.log('success: node removed', data)
+        alert('Great! ' + this.state.id + ' has been removed collection.')
+        this.setState({
+          id: '',
+        })
     }).catch((error) => {
-        console.log('there was an error sending the query', error)
+        console.log('error: node not removed', error)
+        alert('Sorry! There was an error removing ' + this.state.id + ' from your collection. Please try again or contact us.')
+        this.setState({
+        id: '',
+      })
     })
   }
 
