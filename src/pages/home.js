@@ -15,27 +15,28 @@ class Home extends Component {
   render() {
     const { username, password }  = this.state
     return (
-      <div className='container-fluid'>
+      <div className='container cover-container'>
+        <div className='jumbotron'>
         <div className='row'>
-          <div className='col'>
-            <h2>Site description</h2>
+          <div className='col-md'>
+            <h1 className="cover-heading">Isotope</h1>
+            <p className="lead">is a tool to catalogue the movies and tv shows that you own (regardless of format).</p>
           </div>
-          <div className='col'>
-          <div className='card mb-3 bg-dark text-white form-group'>
+          <div className='col-md container-fluid'>
             <form onSubmit={this.onSubmit}>
               <div className='row'>
                 <div className='col'>
                   <input className='form-control' type='text' name='name' value={username} onChange={e => this.setState({ username: e.target.value })} placeholder='Username' required />
                 </div>
                 <div className='col'>
-                <input className='form-control' type='password' name='password' value={password} onChange={e => this.setState({ password: e.target.value })} placeholder='Password' required/>
+                  <input className='form-control' type='password' name='password' value={password} onChange={e => this.setState({ password: e.target.value })} placeholder='Password' required />
+                </div>
               </div>
-            </div>
-            <button className='btn btn-info' type='submit'>Login</button>
-          </form>
+              <button className='btn btn-info' type='submit'>Login</button>
+            </form>
           </div>
         </div>
-      </div>
+        </div>
       </div>
     );
   }

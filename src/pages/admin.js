@@ -11,7 +11,7 @@ class Admin extends Component {
         <div className='jumbotron'>
           <h1 className='display-3'>Admin</h1>
           <main>
-          
+
             <button type="button" className="btn btn-info" data-toggle="modal" data-target="#createModal">Create</button>
             <div className="modal fade" id="createModal" tabIndex="-1" role="dialog" aria-labelledby="createModalTitle" aria-hidden="true">
               <div className="modal-dialog" role="document">
@@ -57,9 +57,9 @@ class Admin extends Component {
               </div>
             </div>
 
-          </main>  
+          </main>
         </div>
-      </div>  
+      </div>
     );
   }
 }

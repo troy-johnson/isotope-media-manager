@@ -1,5 +1,5 @@
 // React
-import React, { Component } from 'react' 
+import React, { Component } from 'react'
 
 // GraphQL
 import { graphql } from 'react-apollo'
@@ -11,26 +11,27 @@ import '../../App.css';
 class Create extends Component {
 
   state = {
-      format: '',
-      image: '',
-      movieDb: '',
-      name: '',
-      yearReleased: '',
+    format: '',
+    image: '',
+    movieDb: '',
+    name: '',
+    yearReleased: '',
   }
 
   onSubmit = (e) => {
     e.preventDefault()
     this.props.mutate({
-      variables: { format: this.state.format, 
-                   image: this.state.image,
-                   movieDb: this.state.movieDb,
-                   name: this.state.name,
-                   yearReleased: Number.parseInt(this.state.yearReleased, 10)
-                }
+      variables: {
+        format: this.state.format,
+        image: this.state.image,
+        movieDb: this.state.movieDb,
+        name: this.state.name,
+        yearReleased: Number.parseInt(this.state.yearReleased, 10)
+      }
     })
       .then(({ data }) => {
         console.log('success: node created', data)
-        alert('Great! ' + this.state.name + ' has been added to your collection.')
+        alert('Success! ' + this.state.name + ' was added to your catalogue.')
         this.setState({
           format: '',
           image: '',
@@ -38,7 +39,7 @@ class Create extends Component {
           name: '',
           yearReleased: '',
         })
-    }).catch((error) => {
+      }).catch((error) => {
         console.log('error: node not created', error)
         alert('Sorry! There was an error submitting ' + this.state.name + '. Please try again or contact us.')
         this.setState({
@@ -48,11 +49,11 @@ class Create extends Component {
           name: '',
           yearReleased: '',
         })
-    })
+      })
   }
 
   render() {
-    const { format, image, movieDb, name, yearReleased }  = this.state
+    const { format, image, movieDb, name, yearReleased } = this.state
     return (
       <div className='form-group'>
         <form onSubmit={this.onSubmit}>
@@ -64,7 +65,7 @@ class Create extends Component {
             </div>
             <div className='col'>
               <input className='form-control' type='text' name='movieDb' value={movieDb} onChange={e => this.setState({ movieDb: e.target.value })} placeholder='The movieDb URL' required />
-              <input className='form-control' type='number' name='yearReleased' step='1' min='1895' max={new Date().getFullYear() + 2} value={yearReleased} onChange={e => this.setState({ yearReleased: e.target.value })} placeholder='Year Released' required/>
+              <input className='form-control' type='number' name='yearReleased' step='1' min='1895' max={new Date().getFullYear() + 2} value={yearReleased} onChange={e => this.setState({ yearReleased: e.target.value })} placeholder='Year Released' required />
             </div>
           </div>
           <button className='btn btn-info' type='submit'>Submit</button>
