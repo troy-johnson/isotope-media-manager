@@ -6,13 +6,6 @@
  Dark Green: #32cb00
  Med Green: #76ff03
  Light Green: #b0ff57
-
- Deep Alpha
- Dark Blue: #243752
- Light Blue: #0A6187
- White: #FFFFFF
- Light Grey: #C7C7C7
- Salmon: #F25944
 */
 
 body {
@@ -27,7 +20,7 @@ header {
     margin-bottom: 50px;
 }
 
-.navbar, .nav-link {
+.navbar, .nav-link, a {
     color: #76ff03;
 }
 
@@ -35,7 +28,7 @@ header {
     background-color: #1b1b1b;
 }
 
-.nav-link:hover {
+.nav-link:hover, a:hover {
     color: #32cb00;
 }
 

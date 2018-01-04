@@ -20,7 +20,8 @@ class Home extends Component {
           <div className='row'>
             <div className='col-md'>
               <h1 className="display-1">Isotope</h1>
-              <p className="lead">...is a tool to catalogue the movies and tv shows that you own (regardless of format).</p>
+              <p className='lead'>...is a tool to catalogue movies and tv shows that you own (regardless of format).</p>
+              <p className='lead'>Functionality will constanly be changing, so please visit the <a href='https://github.com/troy-johnson/media-manager'>repository for this project at GitHub.</a></p>
             </div>
             <div className='col-md card card-login'>
               <div className='card-top'>
