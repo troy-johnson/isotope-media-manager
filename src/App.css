@@ -53,6 +53,14 @@ header {
     margin: 10px;
     position:relative;
     overflow:hidden;
+    background-color: #6d6d6d;
+}
+
+.card-login {
+    width:auto;
+    height:auto;
+    border:none;
+    color: #1b1b1b;
 }
 
 .card-img {
