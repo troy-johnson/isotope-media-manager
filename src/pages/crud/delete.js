@@ -1,5 +1,5 @@
 // React
-import React, { Component } from 'react' 
+import React, { Component } from 'react'
 
 // GraphQL
 import { graphql } from 'react-apollo'
@@ -11,7 +11,7 @@ import '../../App.css';
 class Delete extends Component {
 
   state = {
-      id: '',
+    id: '',
   }
 
   onSubmit = (e) => {
@@ -25,22 +25,22 @@ class Delete extends Component {
         this.setState({
           id: '',
         })
-    }).catch((error) => {
+      }).catch((error) => {
         console.log('error: node not removed', error)
         alert('Sorry! There was an error removing ' + this.state.id + ' from your collection. Please try again or contact us.')
         this.setState({
-        id: '',
+          id: '',
+        })
       })
-    })
   }
 
   render() {
-    const { id }  = this.state
+    const { id } = this.state
     return (
       <div>
         <form onSubmit={this.onSubmit} action='#'>
-            <input className='form-control' id='id-delete' type='text' name='id' value={id} onChange={e => this.setState({ id: e.target.value })} placeholder='ID'/>
-            <button className='btn btn-info' type='submit'>Submit</button>
+          <input className='form-control' id='id-delete' type='text' name='id' value={id} onChange={e => this.setState({ id: e.target.value })} placeholder='ID' />
+          <button className='btn btn-info' type='submit'>Submit</button>
         </form>
       </div>
     )

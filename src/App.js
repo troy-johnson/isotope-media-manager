@@ -7,7 +7,6 @@ import home from './pages/home'
 import notfound from './pages/notfound'
 import library from './pages/library'
 import admin from './pages/admin'
-import detail from './pages/detail'
 
 class App extends Component {
   render() {
@@ -47,7 +46,6 @@ class App extends Component {
             <Switch>
               <Route exact path='/' component={home} />
               <Route path='/library' component={library} />
-              <Route exact path='/detail' component={detail} />
               <Route path='/admin' component={admin} />
               <Route component={notfound} />
             </Switch>
