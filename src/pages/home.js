@@ -31,10 +31,10 @@ class Home extends Component {
                 <form onSubmit={this.onSubmit}>
                   <div className='row'>
                     <div className='col'>
-                      <input className='form-control' type='text' name='name' value={username} onChange={e => this.setState({ username: e.target.value })} placeholder='Username' required />
+                      <input className='form-control' type='text' name='name' value={username} onChange={e => this.setState({ username: e.target.value })} placeholder='Username' required disabled />
                     </div>
                     <div className='col'>
-                      <input className='form-control' type='password' name='password' value={password} onChange={e => this.setState({ password: e.target.value })} placeholder='Password' required />
+                      <input className='form-control' type='password' name='password' value={password} onChange={e => this.setState({ password: e.target.value })} placeholder='Password' required disabled />
                     </div>
                   </div>
                   <button className='btn btn-info' type='submit'>Login</button>
